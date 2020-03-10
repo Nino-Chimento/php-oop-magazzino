@@ -1,10 +1,12 @@
 <?php
   require_once __DIR__ . "/Prodotto.php";
+  require_once __DIR__ ."/traits.php";
   /**
    *
    */
   class Forno extends ProdottoTech
   {
+    use scontistica;
     public $temperaturaMassima;
     public $tipologiaDICOttura;
     public $classeEnergetica;
@@ -23,5 +25,6 @@
   $microonde = new Forno("roventa","mios",50,"A+");
   var_dump($microonde);
   $microonde->calcTemperatura(2,200);
+  $microonde->calcPrezzoScontato(30,400);
   var_dump($microonde);
  ?>

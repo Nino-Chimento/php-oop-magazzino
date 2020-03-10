@@ -1,10 +1,12 @@
 <?php
   require_once "Prodotto.php";
+  require_once "traits.php";
   /**
    *
    */
   class Television extends ProdottoTech
   {
+    use scontistica;
     public $schermo;
     public $risoluzione;
     public $pollici;
@@ -21,5 +23,6 @@
   $Televisione = new Television("philips","nino",34);
   var_dump($Televisione);
   $Televisione->calcScreen(20);
+  $Televisione->calcPrezzoScontato(20,300);
   var_dump($Televisione);
  ?>
