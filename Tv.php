@@ -11,7 +11,10 @@
     public function calcScreen($_pollici)
     {
       if (is_Numeric($_pollici)) {
-        return $this->schermo = $_pollici * 2;
+       $this->schermo = $_pollici * 2;
+      }
+      else {
+        return "Non hai inserito un numero";
       }
     }
   }
