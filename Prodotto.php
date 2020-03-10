@@ -8,9 +8,11 @@
   class ProdottoTech
   {
 
-    public $marca;
-    public $modello;
-    public $prezzo;
+    protected $marca;
+    protected $modello;
+    protected $prezzo;
+    public $scaffale;
+    public $genere;
     function __construct($_marca,$_modello,$_prezzo)
     {
        $this->marca = $_marca;
@@ -21,6 +23,9 @@
     {
       if (is_Numeric($_price)) {
          $this->prezzo = $_price;
+      }
+      else {
+        return  "non hai inserito un numero";
       }
     }
   }
