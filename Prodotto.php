@@ -21,6 +21,6 @@
 
 $Telefono = new ProdottoTech("samsung","ni","23");
 $Telefono->modello = "random";
-$telefono->prezzo = "34";
+$Telefono->prezzo = 34;
 var_dump($Telefono);
 ?>
