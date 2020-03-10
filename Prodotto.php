@@ -13,14 +13,20 @@
     public $prezzo;
     function __construct($_marca,$_modello,$_prezzo)
     {
-      return $this->marca = $_marca;
-      return $this->modello = $_modello;
-      return $this->prezzo = $_prezzo;
+       $this->marca = $_marca;
+       $this->modello = $_modello;
+       $this->prezzo = $_prezzo;
+    }
+    public function setPrice($_price)
+    {
+      if (is_Numeric($_price)) {
+         $this->prezzo = $_price;
+      }
     }
   }
 
 $Telefono = new ProdottoTech("samsung","ni","23");
-$Telefono->modello = "random";
-$Telefono->prezzo = 34;
+var_dump($Telefono);
+$Telefono->setPrice(20);
 var_dump($Telefono);
 ?>

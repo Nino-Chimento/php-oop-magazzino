@@ -1,5 +1,5 @@
 <?php
-  include "Prodotto.php";
+  require_once "Prodotto.php";
   /**
    *
    */
@@ -9,6 +9,6 @@
     public $risoluzione;
 
   }
-  $Televisione = new Tv("philips","nino")
+  $Televisione = new Tv("philips","nino");
 var_dump($ProdottoTech);
  ?>
